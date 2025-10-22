@@ -144,7 +144,159 @@
 
     <div class="course">
       <h3>Informatika</h3>
-      <p>Teacher: Juli Anwar Misbah</p>
+      <p>Teacher: Juli Anwar Misbah</p><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Sederhana</title>
+    <style>
+        /* Reset dan styling dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header dengan hamburger menu */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+            display: block; /* Selalu tampil, tapi bisa disembunyikan di desktop jika mau */
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Menu samping (slide-in dari kiri) */
+        .sidebar {
+            position: fixed;
+            top: 50px; /* Di bawah header */
+            left: -250px; /* Tersembunyi awalnya */
+            width: 250px;
+            height: calc(100vh - 50px);
+            background-color: #343a40;
+            color: white;
+            transition: left 0.3s ease;
+            z-index: 999;
+            padding: 20px;
+        }
+        .sidebar.open {
+            left: 0; /* Muncul saat open */
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Konten utama */
+        .main-content {
+            margin-top: 60px; /* Di bawah header */
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .course-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .course-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Responsif untuk mobile */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="logo">E-Learning App</div>
+    </header>
+
+    <!-- Menu Samping -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Kursus Saya</a></li>
+            <li><a href="#profile">Profil</a></li>
+            <li><a href="#settings">Pengaturan</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="main-content">
+        <h1>Selamat Datang di E-Learning!</h1>
+        <p>Pilih kursus favorit Anda di bawah ini.</p>
+        
+        <div class="course-card">
+            <h3>Kursus Pemrograman Web</h3>
+            <p>Pelajari HTML, CSS, dan JavaScript dari nol.</p>
+            <button>Daftar Sekarang</button>
+        </div>
+        
+        <div class="course-card">
+            <h3>Kursus Data Science</h3>
+            <p>Analisis data dengan Python dan machine learning.</p>
+            <button>Daftar Sekarang</button>
+        </div>
+        
+        <div class="course-card">
+            <h3>Kursus Desain UI/UX</h3>
+            <p>Buat antarmuka yang menarik dan user-friendly.</p>
+            <button>Daftar Sekarang</button>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi toggle menu
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+
     </div>
 
     <div class="course">
@@ -171,3 +323,4 @@
 
 </body>
 </html>
+
